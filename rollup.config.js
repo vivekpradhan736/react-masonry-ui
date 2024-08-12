@@ -8,7 +8,7 @@ export default defineConfig({
   output: {
     dir: "dist",
     format: "es",
-    name: "react-masonryui",
+    name: "react-masonry-gallery",
   },
   external: ["react", "react-dom", "clsx"],
   plugins: [
