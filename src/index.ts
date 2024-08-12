@@ -1,1 +1,1 @@
-export * from "./components/Masonry"
+export { default as Masonry } from './components/Masonry';
