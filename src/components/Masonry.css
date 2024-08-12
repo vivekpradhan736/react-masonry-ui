@@ -1,0 +1,15 @@
+.masonry-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .masonry-column {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .masonry-container {
+      flex-direction: column;
+    }
+  }
+  
