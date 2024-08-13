@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import clsx from 'clsx';
-import './Masonry.css';
 
 interface MasonryProps {
   columns?: number;
@@ -11,6 +10,7 @@ interface MasonryProps {
   borderRadius?: 'none' | 'small' | 'medium' | 'large' | 'full';
   className?: string;
   children: ReactNode;
+  [key: string]: any;
 }
 
 const Masonry: React.FC<MasonryProps> = ({
@@ -18,7 +18,7 @@ const Masonry: React.FC<MasonryProps> = ({
   gap = 20,
   variant = 'default',
   alignment = 'left',
-  gutter = 'medium',
+  gutter = 'small',
   borderRadius = 'none',
   className,
   children,
@@ -27,27 +27,27 @@ const Masonry: React.FC<MasonryProps> = ({
   const columnWrapper: { [key: string]: ReactNode[] } = {};
   const result: ReactNode[] = [];
 
-  const variantStyles: { [key: string]: string } = {
+  const variantStyles = {
     default: '',
     shadow: 'shadow-lg',
     border: 'border border-gray-300',
     gradient: 'bg-gradient-to-r from-gray-100 to-gray-200',
   };
 
-  const alignmentStyles: { [key: string]: string } = {
+  const alignmentStyles = {
     left: 'justify-start',
     center: 'justify-center',
     right: 'justify-end',
   };
 
-  const gutterStyles: { [key: string]: string } = {
+  const gutterStyles = {
     none: 'p-0',
-    small: 'p-2',
-    medium: 'p-4',
+    small: 'p-1',
+    medium: 'p-3',
     large: 'p-6',
   };
 
-  const borderRadiusStyles: { [key: string]: string } = {
+  const borderRadiusStyles = {
     none: 'rounded-none',
     small: 'rounded',
     medium: 'rounded-md',
