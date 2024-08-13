@@ -1,7 +1,7 @@
 import React, { ReactNode, CSSProperties } from 'react';
-import './ColoumMasonry.css';
+import './Masonry.css';
 
-interface ColoumMasonryProps {
+interface MasonryProps {
   children: ReactNode;
 }
 
@@ -9,7 +9,7 @@ interface ItemStyles {
   [key: string]: CSSProperties;
 }
 
-const ColoumMasonry: React.FC<ColoumMasonryProps> = ({ children }) => {
+const Masonry: React.FC<MasonryProps> = ({ children }) => {
   const itemStyles: ItemStyles = {
     wide: { gridColumn: 'span 2' },
     tall: { gridRow: 'span 2' },
@@ -40,4 +40,4 @@ const ColoumMasonry: React.FC<ColoumMasonryProps> = ({ children }) => {
   );
 };
 
-export default ColoumMasonry;
+export default Masonry;

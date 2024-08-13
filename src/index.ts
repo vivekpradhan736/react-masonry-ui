@@ -1,2 +1,2 @@
-export { default as Masonry } from './components/Masonry';
-export { default as ColoumMasonry } from './components2/ColoumMasonry';
+export { default as Masonry } from './components2/Masonry';
+export { default as ColoumMasonry } from './components/ColoumMasonry';

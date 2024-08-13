@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import clsx from 'clsx';
 
-interface MasonryProps {
+interface ColoumMasonryProps {
   columns?: number;
   gap?: number;
   variant?: 'default' | 'shadow' | 'border' | 'gradient';
@@ -13,7 +13,7 @@ interface MasonryProps {
   [key: string]: any;
 }
 
-const Masonry: React.FC<MasonryProps> = ({
+const ColoumMasonry: React.FC<ColoumMasonryProps> = ({
   columns = 3,
   gap = 20,
   variant = 'default',
@@ -106,4 +106,4 @@ const Masonry: React.FC<MasonryProps> = ({
   );
 };
 
-export default Masonry;
+export default ColoumMasonry;
